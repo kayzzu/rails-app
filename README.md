@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Dependencies:
 
-Things you may want to cover:
+- Ruby 3.0.0
 
-* Ruby version
+- Rails 7.0.1
 
-* System dependencies
+- Bundler 2.3.6
 
-* Configuration
+### Run the app:
 
-* Database creation
+- bundler install
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- rails s
