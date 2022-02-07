@@ -1,14 +1,30 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Developers</h1>
-
-<div id="developers">
-  <% @developers.each do |developer| %>
-    <%= render developer %>
-    <p>
-      <%= link_to "Show this developer", developer %>
-    </p>
-  <% end %>
-</div>
-
-<%= link_to "New developer", new_developer_path %>
+<table class="table table-striped">
+  <thead class="table-dark">
+    <tr>
+      <th>#</th>
+      <th scope="col">First name</th>
+      <th scope="col">Last name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Github</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @developers.each do |developer| %>
+    <tr>
+      <th><%= developer.id %></th>
+      <td><%= developer.first_name %></td>
+      <td><%= developer.last_name %></td>
+      <td><%= developer.email %></td>
+      <td><%= developer.phone %></td>
+      <td><%= link_to developer.github.sub("https://github.com/", ""), developer.github %></td>
+      <td><%= link_to "Show", developer, class:'btn btn-dark' %></td>
+      <td><%= link_to "Edit", edit_developer_path(developer), class:'btn btn-dark' %></td>
+    </tr>
+      <% end %>
+  </tbody>
+</table>
